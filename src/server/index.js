@@ -5,7 +5,7 @@
 const express = require('express');
 const app = express();
 // const Home = require('./containers/Home/index.js');
-import Home from './containers/Home/index.js';
+import Home from '../containers/Home';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
