@@ -10,8 +10,8 @@ const Home = ()=>{
     return (
         <div>
 
-            <div>同构</div>
-            <button onClick={()=>{alert('浏览器端访问')}}>click</button>
+            <div>同构aaaa</div>
+            <button onClick={()=>{alert('浏览访问')}}>click</button>
         </div>
     )
 }

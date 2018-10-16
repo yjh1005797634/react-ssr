@@ -18,36 +18,16 @@
 
 //客户端
 const path = require('path');
-
-
-module.exports = {
-
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+const clientConfig = {
     mode:'development',
     // target:'node',
     entry:'./src/client/index.js',
     output:{
         filename:'csrIndex.js',
         path:path.resolve(__dirname,'static')
-    },
-
-    // externals:[nodeExternals()],
-    module:{
-        rules:[
-            {
-                test:/\.js?$/,
-                loader:'babel-loader',
-                exclude:/node_modules/,
-                options:{
-                    presets:['react','stage-0',
-                        ['env',{
-                            targets:{
-                                browsers:['last 2 version']
-                            }
-                        }]
-                    ]
-                }
-            }
-
-        ]
     }
-}
+};
+
+module.exports  = merge(baseConfig,clientConfig);
